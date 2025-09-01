@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МОДА-2022 - Выставка детской одежды</title>
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, table, td, p, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+            display: block;
+            max-width: 100%;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        .text-bar {
+            border: none;
+            background-color: #f298db;
+            text-align: start;
+            padding: 9px 16px;
+            height: 46px;
+        }
+        .text-bar h2 {
+            color: #ffffff;
+            font-family: Arial;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            width: 100%;
+        }
+        .section-sponsors {
+            padding: 12px;
+        }
+        .content {
+            background-color: #ffffff;
+        }
+        .sponsor-item {
+            width: 136px;
+            height: 66px;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            align-self: center;
+            align-content: center;
+            border-top: 15px solid #FFFFFF;
+            border-left: 8px solid #FFFFFF;
+            border-right: 8px solid #FFFFFF;
+            border-bottom: 15px solid #FFFFFF;
+        }
+        .sponsor-item a {
+            text-align: center;
+            align-content: center;
+        }
+        .section-info {
+            padding: 0px 16px 24px 16px;
+        }
+        .info {
+            font-family: Arial;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            letter-spacing: 0%;
+        }
+        .gallary-table-container {
+            padding: 20px 16px 28px 16px;
+            align-items: center;
+            align-content: center;
+            text-align: start;
+        }
+        .gallary-image {
+            align-self: center;
+            vertical-align: middle;
+        }
+        .gallary-text {
+            max-width: 276px;
+            font-family: Arial;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #212121;
+            text-align: start !important;
+        }
+        .gallary-text-cell {
+            height: 100%;
+            vertical-align: middle;
+            padding-top: 16px;
+            padding-left: 16px;
+            max-width: 280px;
+            line-height: 100%;
+            height: 100%;
+        }
+        .gallary-table {
+            height: 350px;
+            max-height: 100%;
+            line-height: 100%;
+            align-items: center;
+            text-align: start;
+            align-content: center;
+            align-self: center;
+        }  
+        .gallary-table td {
+            display: inline-block;
+            align-self: center;
+            align-content: center;
+            line-height: 100%;
+            height: min-content;
+        }
+        .link {
+            color: #212121;
+            text-decoration: underline;
+        }
+        .section-place {
+            padding: 22px 15px 12px 16px;
+            font-family: Arial;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .section-place ol {
+            padding-left: 20px;
+        }
+        .section-place li {
+            margin-bottom: 5px;
+            font-family: Arial;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+        .section-additional-info {
+            padding: 0px 18px 8px 14px;
+            font-family: Arial;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+        }
+        .section-time-table {
+            padding: 0px 18px 28px 14px;
+        }
+        .section-time-table h2 {
+            font-family: Arial;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+        }
+        .time {
+            font-family: Arial;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 0%;
+        }
+        .section-button {
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 28px;
+        }
+        .button {
+            text-decoration: none;
+            border-radius: 4px;
+            background-color: #1f84db;
+            color: #ffffff;
+            font-family: Arial;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 12px 24px;
+            display: inline-block;
+            text-align: center;
+        }
+        .footer {
+            background-color: #f298db;
+            color: #ffffff;
+            text-align: center;
+            font-family: Arial;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            padding: 21px 20px 20px 20px;
+        }
+        .outer-table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 650px) {
+            .container {
+                width: 100% !important;
+            }
+            
+            .sponsor-grid table {
+                width: 100% !important;
+            }
+            
+            .sponsor-grid tr {
+                text-align: center !important;
+            }
+            
+            .sponsor-item {
+                width: 50% !important;
+                height: auto !important;
+                display: inline-block !important;
+                padding: 10px 5px !important;
+                box-sizing: border-box !important;
+            }
+            
+            .sponsor-item a {
+                font-size: 18px !important;
+            }
+            
+            .sponsor-item img {
+                max-width: 80% !important;
+                max-height: 35px !important;
+                margin: 0 auto !important;
+            }
+            
+            .gallary-text {
+                max-width: 100% !important;
+                font-size: 16px !important;
+                line-height: 120% !important;
+                text-align: center;
+            }
+            
+            .section-place {
+                margin-left: 25px !important;
+            }
+            
+            .section-place ol {
+                padding-left: 15px !important;
+            }
+            
+            .section-place li {
+                font-size: 15px !important;
+                line-height: 150% !important;
+            }
+            
+            .text-bar h2 {
+                font-size: 20px !important;
+                padding: 12px 16px !important;
+            }
+            
+            .info,
+            .section-additional-info,
+            .time {
+                font-size: 16px !important;
+                line-height: 130% !important;
+            }
+            
+            .section-time-table h2 {
+                font-size: 17px !important;
+            }
+            
+            .button {
+                padding: 14px 28px !important;
+                font-size: 17px !important;
+            }
+            
+            .footer {
+                font-size: 20px !important;
+                padding: 25px 20px !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5;">
+    <center>
+        <table class="outer-table" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-color: white;">
+            <tr>
+                <td>
+                    <table class="container" align="center" cellpadding="0" cellspacing="0" border="0" width="600" style="border-color: white;" bgcolor="#ffffff">
+                        <tr>
+                            <td>
+                                <img src="https://i.ibb.co/DD2Hx85J/banner.jpg" alt="Приглашаем на выставку CJF – ДЕТСКАЯ МОДА-2022 Эксклюзивные новинки детской одежды 27–30 сентября Москва, Экспоцентр" border="0">
+                            </td>
+                        </tr>
+
+                        <tr class="section-sponsors-container">
+                            <td class="section-sponsors">
+                                <table class="sponsor-grid" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-color: white;">
+                                    <tr>
+                                        <td align="center">
+                                            <table align="center" cellpadding="0" cellspacing="0" border="0" style="border-color: white;">
+                                                <tr>
+                                                    <td class="sponsor-item">
+                                                        <a href="https://www.sima-land.ru/trademark/minaku/detskaya-odezhda/" target="_blank"><img src="https://i.ibb.co/DfxJjv3B/Frame-87.png" width="119" height="34.33" alt="MINAKU" class="sponsor"></a>
+                                                    </td>
+                                                    <td class="sponsor-item">
+                                                        <a href="https://www.sima-land.ru/trademark/kroshka-ya/detskaya-odezhda/" target="_blank"><img src="https://i.ibb.co/20TjBKFk/2.png" width="123" height="31.4" alt="КРОШКА Я" class="sponsor"></a>
+                                                    </td>
+                                                    <td class="sponsor-item">
+                                                        <a href="https://www.sima-land.ru/trademark/kaftan/detskaya-odezhda/" target="_blank"><img src="https://i.ibb.co/23dDymwq/image.png" width="123" height="25.37" alt="KAFTAN" class="sponsor"></a>
+                                                    </td>
+                                                    <td class="sponsor-item">
+                                                        <a href="https://www.sima-land.ru/tovary-s-lyubimymi-geroyami/odezhda-obuv-i-aksessuary/" target="_blank" style="text-decoration: none; color: #333333;">
+                                                            <img src="https://i.ibb.co/j9p9Wn0w/image.png" alt="Любимые Герои" border="0">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="section-info">
+                                <p class="info">С 27 по 30 сентября в Москве пройдёт международная выставка «CJF – ДЕТСКАЯ МОДА-2022. ОСЕНЬ». Мы представим новые коллекции детской одежды собственных торговых марок.</p>
+                            </td>
+                        </tr>
+
+                        <tr class="text-bar-container">
+                            <td class="text-bar">
+                                <h2>Что будет на выставке</h2>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="gallary-table-container">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="gallary-table">
+                                    <tr style="display: block; align-items: center; align-content: center; text-align: center;">
+                                        <td width="280" align="center" valign="middle" class="gallary-image">
+                                            <img src="https://i.ibb.co/Y4sbp5F9/text-pic.jpg" alt="Новинки выставки" width="276" height="350" style="display: block; margin: 0 auto;">
+                                        </td>
+                                        <td valign="middle" class="gallary-text-cell" style="vertical-align: middle; text-align: left;">
+                                            <p class="gallary-text" style="margin: 0; text-align: left;">
+                                                Мы покажем новинки 2022–23 гг. торговых марок <a class="link" href="https://www.sima-land.ru/trademark/minaku/detskaya-odezhda/" target="_blank">MINAKU</a>, <a class="link" href="https://www.sima-land.ru/trademark/kaftan/detskaya-odezhda/" target="_blank">KAFTAN</a> и «<a class="link" href="https://www.sima-land.ru/trademark/kroshka-ya/odezhda-i-obuv/" target="_blank">Крошка Я</a>».<br><br>
+                                                Вас ждут повседневная, спортивная, школьная, праздничная, домашняя одежда и чулочно-носочные изделия, а также лицензионные коллекции для детей от 0 до 14 лет.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="text-bar-container">
+                            <td class="text-bar">
+                                <h2>Как попасть на выставку</h2>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="section-place">
+                                <ol>
+                                    <li>Пройти онлайн-регистрацию на <a class="link" href="https://www.cjf-expo.ru/" target="_blank">сайте выставки</a>.</li>
+                                    <li>С 27 по 30 сентября приехать по адресу:<br>г. Москва, Краснопресненская набережная, 14, Экспоцентр.</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="section-additional-info">
+                                <p>Ждём вас в павильоне № 7, зал 2, стенд 72С50.</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="section-time-table">
+                                <h2>Часы работы выставки:</h2>
+                                <p class="time">
+                                    27–29 сентября с 10:00 до 18:00;<br>
+                                    30 сентября с 10:00 до 16:00.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="section-map">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-color: white;">
+                                    <tr>
+                                        <td align="center">
+                                            <a href="https://yandex.ru/maps/?um=constructor%3A4495a9766327442232b215d8836c507b9d320cc83ae3a0e30d96a943cfdee16e&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A4495a9766327442232b215d8836c507b9d320cc83ae3a0e30d96a943cfdee16e&amp;width=600&amp;height=250&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding: 40px 0 28px 0;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="display: inline-block;">
+                                    <tr>
+                                        <td align="center">
+                                            <a href="https://www.cjf-expo.ru/ru/visitors/ticket/?step=step1" target="_blank" >
+                                                <img src="https://i.ibb.co/20jVvFKz/but-1.png" alt="Зарегистрироваться" width="205" height="40" border="0">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="footer">
+                                Будем рады встрече с вами!
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
